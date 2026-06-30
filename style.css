@@ -129,20 +129,21 @@ nav li {
     transition: all 150ms ease-in-out;
 }
 
-nav li:hover,
-nav li:focus-visible {
+nav li:hover {
     background-color: var(--neutral-0);
 }
 
-button:focus-visible,
-button:focus {
-    outline: 2px solid var(--terracotta-600);
-    outline-offset: 2px;
+nav a {
+    text-decoration: none;
+    color: black;
 }
 
-nav ul li:focus-visible,
-nav ul li:focus {
-    border: 2px solid var(--terracotta-600);
+button:focus-visible,
+button:focus,
+nav a:focus-visible li,
+nav a:focus li {
+    outline: 2px solid var(--terracotta-600);
+    outline-offset: 2px;
 }
 
 li.your-stay {
@@ -558,7 +559,7 @@ p.dmsans {
     padding: 1.5rem 1rem;
     max-height: fit-content;
     min-width: 295px;
-    max-width: 340px;
+    max-width: 400px;
     background-color: var(--neutral-0);
     transition: all 250ms ease-in-out;
 }
@@ -759,6 +760,11 @@ p.small {
 
         .nav-container {
             padding: 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
         }
     }
 
