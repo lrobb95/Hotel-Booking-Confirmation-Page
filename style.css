@@ -224,7 +224,7 @@ li div {
 main {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1rem;
     width: 100%;
     padding: 1.75rem 2rem;
     height: 100dvh;
@@ -241,7 +241,7 @@ main {
 header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 header .grouping:has(h1) {
@@ -284,6 +284,7 @@ header button {
 .white-btn {
     border: 1px solid lightgray;
     background-color: transparent;
+    color: #000;
 }
 
 .white-btn:hover,
@@ -693,6 +694,10 @@ p.small {
     text-transform: uppercase;
 }
 
+.network p:nth-child(2) {
+    font-family: var(--font-dmsans);
+}
+
 .bottom-cards article .card-head {
     display: flex;
     align-items: center;
@@ -705,7 +710,13 @@ p.small {
     gap: .5rem;
 }
 
-/*      Tablet      */
+@media (width <= 1196px) {
+    .bottom-cards {
+        flex-wrap: wrap;
+    }
+}
+
+/*      Tablet/Phone      */
 
 @media (width <= 1099px) {
     .site-container {
@@ -745,21 +756,21 @@ p.small {
         .mobile-nav ul {
             padding-top: .5rem;
         }
+
+        .nav-container {
+            padding: 1rem;
+        }
     }
 
     .nav-container {
         display: flex;
         justify-content: space-between;
+        border-bottom: 1px solid lightgray;
+        padding-bottom: .5rem;
     }
 
     header {
         flex-direction: column;
-    }
-}
-
-@media (width <= 951px) {
-    .bottom-cards {
-        flex-wrap: wrap;
     }
 }
 
@@ -810,9 +821,22 @@ p.small {
 @media (width <= 467px) {
     .receipt {
         width: 300px;
+
+        p {
+            font-size: .8rem;
+        }
     }
 
     .welcome-card {
         width: 300px;
+    }
+
+    p:not(.bottom-cards p),
+    li {
+        font-size: .75rem;
+    }
+
+    .sun {
+        display: none;
     }
 }

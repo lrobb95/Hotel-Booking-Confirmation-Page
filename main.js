@@ -9,3 +9,10 @@ getBtn.addEventListener('click', () => {
 getClose.addEventListener('click', () => {
     getNav.classList.remove('active');
 })
+
+const getCopyBtn = document.getElementById('copyBtn');
+
+getCopyBtn.addEventListener('click', () => {
+    const getPassword = document.querySelector(copyBtn.dataset.copy).textContent;
+    navigator.clipboard.writeText(getPassword);
+})
